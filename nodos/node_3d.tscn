@@ -1,0 +1,115 @@
+[gd_scene load_steps=13 format=3 uid="uid://da1rhxskp1lms"]
+
+[ext_resource type="PackedScene" uid="uid://bbqw4jkl0er11" path="res://nodos/character.tscn" id="1_hwgyu"]
+[ext_resource type="Script" path="res://assets/colisionEnemigo3D.cs" id="1_q62uj"]
+[ext_resource type="Script" path="res://assets/character.cs" id="2_seyp2"]
+[ext_resource type="MeshLibrary" uid="uid://g58s0fyfpvsx" path="res://tileset.tres" id="4_gebi7"]
+[ext_resource type="PackedScene" uid="uid://dawbtohwup3aj" path="res://nodos/dialogue_system.tscn" id="5_mcdiy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4qfyj"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_jtfr4"]
+sky_material = SubResource("ProceduralSkyMaterial_4qfyj")
+
+[sub_resource type="Environment" id="Environment_ffub3"]
+background_mode = 2
+sky = SubResource("Sky_jtfr4")
+ambient_light_color = Color(0.857297, 0.891835, 0.913298, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.03
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.827451, 0.901961, 0.917647, 1)
+fog_light_energy = 0.03
+fog_density = 0.0187
+
+[sub_resource type="CSharpScript" id="CSharpScript_jjkot"]
+script/source = "using Godot;
+using System;
+
+public partial class portal : RigidBody3D
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+
+
+"
+
+[sub_resource type="BoxMesh" id="BoxMesh_gvcsc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dyrwc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2gdpf"]
+
+[node name="Level" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ffub3")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99518, 1.98321, 0.0755863)
+script = SubResource("CSharpScript_jjkot")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_gvcsc")
+
+[node name="Area3D" type="Area3D" parent="RigidBody3D"]
+transform = Transform3D(1, 2.98023e-08, 2.98023e-08, 0, 1, -8.9407e-08, 2.98023e-08, -5.96046e-08, 1, -0.00166944, -0.00303078, 0.00193381)
+script = ExtResource("1_q62uj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Area3D"]
+transform = Transform3D(1, 0.000100966, -4.92355e-05, -0.000100966, 1, 8.29301e-05, 4.92356e-05, -8.29301e-05, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_dyrwc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_2gdpf")
+
+[node name="Character" parent="." instance=ExtResource("1_hwgyu")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 1.58853, -0.460518)
+script = ExtResource("2_seyp2")
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh_library = ExtResource("4_gebi7")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65534, 65534, 2, 65534, 0, 1441794, 0, 0, 1441794, 0, 65534, 1441794, 0, 2, 655360, 65534, 2, 655360, 65532, 2, 655360, 65531, 2, 655360, 0, 65532, 0, 65534, 65532, 0, 65532, 65532, 0, 65530, 65532, 0, 65532, 65534, 2, 65532, 0, 2, 65530, 65534, 2, 65530, 0, 2, 65528, 65535, 2, 65528, 1, 2, 65528, 65532, 0, 2, 65532, 1, 2, 2, 1441793, 2, 0, 1441792, 2, 65534, 1441792, 65527, 0, 1048578, 65527, 65533, 1048579, 65527, 1, 3, 65528, 65533, 655362, 65526, 65535, 655362, 65526, 65533, 655362, 65526, 0, 1441794, 65526, 65532, 0, 65524, 65532, 0, 65524, 65534, 655362, 65524, 0, 655362, 65523, 1, 1048576, 65523, 65535, 1048576, 65523, 65533, 1048576, 65525, 65532, 0, 65523, 65532, 1048577, 65523, 2, 655361, 65525, 23, 1441794, 65525, 21, 1441794, 65527, 21, 1441792, 65527, 23, 1441792, 65527, 19, 1441792, 65527, 17, 3, 65529, 17, 0, 65525, 25, 1441794, 65525, 27, 1441794, 65523, 26, 1048579, 65523, 28, 655360, 65525, 28, 655360, 65527, 25, 1441792, 65527, 27, 1441792, 65527, 28, 1441792, 65527, 30, 1441793, 65525, 30, 1441792, 65521, 28, 1048576, 65521, 26, 1048577, 65521, 30, 1048577, 65530, 17, 0, 65530, 18, 655360, 65529, 18, 655360, 65523, 21, 1048576, 65523, 24, 1048576, 65523, 23, 1048576, 65525, 19, 1048578, 65523, 17, 1048577, 65523, 18, 1048576, 65523, 19, 1048576, 65525, 17, 1048578, 65525, 15, 1048576, 65526, 15, 1048578, 65527, 15, 1441792, 65525, 13, 1048576, 65527, 13, 1441792, 65524, 13, 1048576, 65527, 14, 1441792, 65525, 11, 1048576, 65525, 9, 1048576, 65525, 5, 1048576, 65525, 4, 1048576, 65527, 11, 1441792, 65527, 9, 1441792, 65527, 7, 1441792, 65527, 5, 1441792, 65525, 7, 1048576, 65527, 3, 1048578, 65525, 2, 1048578, 65529, 2, 1048578, 65529, 4, 1048577, 65530, 3, 1441795)
+}
+
+[node name="Okhalam" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2788, 2.33726, 41.3962)
+script = SubResource("CSharpScript_jjkot")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Okhalam"]
+mesh = SubResource("BoxMesh_gvcsc")
+
+[node name="Area3D" type="Area3D" parent="Okhalam"]
+transform = Transform3D(1, 2.98023e-08, 2.98023e-08, 0, 1, -8.9407e-08, 2.98023e-08, -5.96046e-08, 1, -0.00166944, -0.00303078, 0.00193381)
+script = ExtResource("1_q62uj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Okhalam/Area3D"]
+transform = Transform3D(1, 0.000100966, -4.92355e-05, -0.000100966, 1, 8.29301e-05, 4.92356e-05, -8.29301e-05, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_dyrwc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Okhalam"]
+shape = SubResource("BoxShape3D_2gdpf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Okhalam"]
+
+[node name="DialogueSystem" parent="Okhalam/CanvasLayer" instance=ExtResource("5_mcdiy")]
+
+[connection signal="area_entered" from="RigidBody3D/Area3D" to="Character" method="_on_area_3d_area_entered"]
+[connection signal="area_entered" from="Okhalam/Area3D" to="Character" method="_on_area_3d_area_entered"]
+[connection signal="visibility_changed" from="Okhalam/CanvasLayer/DialogueSystem" to="Character" method="_on_dialogue_system_visibility_changed"]

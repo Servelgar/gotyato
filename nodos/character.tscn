@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbqw4jkl0er11"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ixj0p"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ag1v1"]
+
+[node name="Character" type="CharacterBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_ixj0p")
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00882053, -0.0025245, 0)
+light_color = Color(0.94902, 0.882353, 0.85098, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_ag1v1")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_ag1v1")

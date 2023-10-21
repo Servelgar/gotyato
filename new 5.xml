@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <node id="0">
+        <speaker> NARR. </speaker>
+        <text> El hombre levanta la cabeza para centrar su atenciÃ³n en ti. </text>
+    </node> 
+    <node id="1">
+        <speaker> NARR. </speaker>
+        <text> Si no fuera por el trozo de tela cubriendo sus ojos con saÃ±a,
+         dirÃ­Â­as que te estÃ¡ mirando como un corderito degollado. </text>
+    </node> 
+</root>

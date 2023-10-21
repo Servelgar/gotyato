@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwtc0gjvek38l"]
+
+[ext_resource type="Theme" uid="uid://chb5b30y7avg7" path="res://themes/health-bar.tres" id="1_hmovt"]
+[ext_resource type="Script" path="res://nodos/ProgressBar.cs" id="2_02sbg"]
+
+[node name="Combat GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 28.0
+offset_right = 613.0
+offset_bottom = 78.0
+theme = ExtResource("1_hmovt")
+value = 100.0
+show_percentage = false
+script = ExtResource("2_02sbg")

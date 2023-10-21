@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <node id="0">
+        <speaker> NARR. </speaker>
+        <text> El hombre levanta la cabeza para centrar su atención en ti. </text>
+    </node> 
+    <node id="1">
+        <speaker> NARR. </speaker>
+        <text> Si no fuera por el trozo de tela cubriendo sus ojos con saña,
+         dirí­as que te está mirando como un corderito degollado. </text>
+    </node> 
+    <node id="2">
+        <speaker> NARR. </speaker>
+        <text> Es raro -y peligroso- que los de su calaña se vean por aquí. </text> 
+    </node>
+    <node id="3">
+        <speaker> OKHALAM </speaker>
+        <text> "La filistata ha encontrado ya su presa. Muy bien. Soy Okhalam, ferviente adorador de la Bestia Ahogada así como de todas sus creaciones." </text> 
+    </node>
+    <node id="4">
+        <speaker> OKHALAM </speaker>
+        <text> "Capellán del Viento de Sagasta, navío grande y libre, quinto de la flota de corsarios de la Cala Blackwater. Asaltante de Rowerbrook y Puerto Luna..."</text> 
+    </node>
+    <node id="5">
+        <speaker> NARR. </speaker>
+        <text> Okhalam coge aire. Aún no ha terminado.</text> 
+        <options> 
+            <option nextNode="6"> 
+                <body>1. [Arráncarle la garganta de cuajo antes de que siga]</body>
+            </option>
+            <option nextNode="10"> 
+                <body>2. En algún momento se tendrá que callar.</body>
+            </option>
+        </options>
+    </node>
+    <node id="6">
+        <speaker> NARR. </speaker>
+        <text> Clavas tus garras en su tierna carne. Solo hace falta un pequeño tirón para desgarrar su voz.</text>
+        <final> 1 </final>
+    </node>
+    <node id="10">
+        <speaker> OKHALAM </speaker>
+        <text> "... Dos veces ganador y trece perdedor. Vivo y nacido, amante y amado. Sin merced me encuentro aquí."</text> 
+    </node>
+    <node id="11">
+        <speaker> OKHALAM </speaker>
+        <text> "Dime, no he escuchado tus pasos. ¿Qué clase de criatura repta, pero no mata?" </text>
+        <options> 
+            <option nextNode="6"> 
+                <body>1. [Ahora sí: Arrancarle la garganta de cuajo.]</body>
+            </option>
+            <option nextNode="20"> 
+                <body>2. "Dame una excusa para no hacerlo."</body>
+            </option>
+            <option nextNode="50"> 
+                <body>3. "Si quieres que te responda a eso vas a tener que contestarme antes a mi."</body>
+            </option>
+            <option nextNode="150"> 
+                <body>4. "... Un caracol."</body>
+            </option>
+            <option nextNode="200"> 
+                <body>5. "Te has ido muy lejos de tu barquito, Okhalam."</body>
+            </option>
+        </options>
+    </node>
+    <node id="20">
+        <speaker> OKHALAM </speaker>
+        <text> "No puedo. Estoy a tu merced, criatura. La maliciosa marea me ha traído hasta aquí y me someteré a sus designios." </text>
+        <final> 1 </final>
+    </node>
+    <node id="21">
+        <speaker> OKHALAM </speaker>
+        <text> "Pero, si acaso sirve, te agradeceré que respondieras a mi pregunta." </text>
+        <options> 
+            <option nextNode="6"> 
+                <body>1. [Ahora sí: Arrancarle la garganta de cuajo.]</body>
+            </option>
+            <option nextNode="50"> 
+                <body>2. "Si quieres que te responda a eso vas a tener que contestarme antes a mi."</body>
+            </option>
+            <option nextNode="100"> 
+                <body>3. "No me gustan los acertijos."</body>
+            </option>
+            <option nextNode="150"> 
+                <body>4. "Algo que repta pero no mata: Un caracol."</body>
+            </option>
+            <option nextNode="200"> 
+                <body>5. "Te has ido muy lejos de tu barquito, Okhalam."</body>
+            </option>
+        </options>
+    </node>
+
+    <node id="50">
+        <speaker> NARR. </speaker>
+        <text> "El humano traga saliva y agita la cabeza levemente, en señal de afirmación. </text>
+    </node>
+
+    <node id="51">
+        <speaker> OKHALAM </speaker>
+        <text> "Muy bien. ¿Qué deseas saber?" </text>
+        <options> 
+            <option nextNode="52"> 
+                <body>1. "¿Qué haces aquí?"</body>
+            </option>
+            <option nextNode="60"> 
+                <body>2. "¿Hacía falta el discursito?"</body>
+            </option>
+            <option nextNode="70"> 
+                <body>3. "¿De dónde dices que eres?"</body>
+            </option>
+            <option nextNode="80"> 
+                <body>4. "No veo ningún barco cerca. ¿Y el resto de tu tripulación?"</body>
+            </option>
+        </options>
+    </node>
+
+    
+
+    <node id="52">
+        <speaker> OKHALAM</speaker>
+        <text> "La razón exacta -no la sé. Mis compatriotas y yo surcábamos los mares al Oeste de la Península de los Esclavos, en busca de islas inexploradas." </text>
+    </node>
+    <node id="53">
+        <speaker> OKHALAM </speaker>
+        <text> "Nos arrastró una tormenta y encalló el barco en un islote con una cueva. Nos aventuramos dentro."</text>
+    </node>
+    <node id="54">
+        <speaker> OKHALAM </speaker>
+        <text> "Caí en una trampa, o más bien en una desafortunada forma de pasillo sinusoidal. La cuestión es que caí... hacia abajo, *creo*."</text>
+    </node>
+    <node id="55">
+        <speaker> OKHALAM </speaker>
+        <text> "El resto es el presente."</text>
+        <options> 
+            <option nextNode="56"> 
+                <body>1. "¿Fuiste el único en *caer*?"</body>
+            </option>
+            <option nextNode="57"> 
+                <body>2. "Para haberte caído, no te veo muy herido."</body>
+            </option>
+            <option nextNode="51"> 
+                <body>3. "Olvida eso, déjame hacerte otra pregunta."</body>
+            </option>
+        </options>
+    </node>
+
+    <node id="56">
+        <speaker> OKHALAM </speaker>
+        <text> "No lo fui. No los vi, pero sí escuché sus gritos acompañarme."</text>
+        <options> 
+            <option nextNode="56"> 
+                <body>1. "¿Fuiste el único en *caer*?"</body>
+            </option>
+            <option nextNode="57"> 
+                <body>2. "Para haberte caído, no te veo muy herido."</body>
+            </option>
+            <option nextNode="51"> 
+                <body>3. "Olvida eso, déjame hacerte otra pregunta."</body>
+            </option>
+        </options>
+    </node>
+
+    <node id="57">
+        <speaker> OKHALAM </speaker>
+        <text> "Y no lo estoy."</text>
+        <options> 
+            <option nextNode="56"> 
+                <body>1. "¿Fuiste el único en *caer*?"</body>
+            </option>
+            <option nextNode="57"> 
+                <body>2. "Para haberte caído, no te veo muy herido."</body>
+            </option>
+            <option nextNode="51"> 
+                <body>3. "Olvida eso, déjame hacerte otra pregunta."</body>
+            </option>
+        </options>
+    </node>
+
+    <node id="60">
+        <speaker> OKHALAM </speaker>
+        <text> "Me siento fascinado por el 'lugar' en el que me encuentro. Alabanzas a mi deidad es mi forma de agradecérselo."</text>
+    </node>
+
+    <node id="61">
+        <speaker> OKHALAM </speaker>
+        <text>  "No solo soy un clérigo. Soy un *siervo* de las mareas."</text>
+    </node>
+
+    <node id="62">
+        <speaker> NARR. </speaker>
+        <text> La voz del siervo es cada vez más alta y orgullosa a la par que delirante. </text>
+        <options> 
+            <option nextNode="63"> 
+                <body>1. "No creo que la Ahogada quiera escuchar tus agradecimientos."</body>
+            </option>
+            <option nextNode="51"> 
+                <body>2. "Olvida eso, déjame hacerte otra pregunta."</body>
+            </option>
+            <option nextNode="1000"> 
+                <body>3. [Esto es un sin sentido. Comprueba qué cráneo es más duro: El tuyo o el suyo.] </body>
+            </option>
+        </options>
+    </node>
+
+    <node id="63">
+        <speaker> OKHALAM </speaker>
+        <text>  "Mi voz llega a su Gran Entendimiento. Eso te puedo asegurar." </text>
+    </node>
+
+    <node id="64">
+        <speaker> OKHALAM </speaker>
+        <text>  "¡Del mar, por supuesto! Solo he pisado tierra para saquearla o ahogarla."</text>
+    </node>
+
+    <node id="65">
+        <speaker> OKHALAM </speaker>
+        <text>  "¡Y ahora que estoy aquí, solo puede significar una *cosa*!"</text>
+    </node>
+
+    <node id="66">
+        <speaker> OKHALAM </speaker>
+        <text>  "¡La Ahogada me va a mostrar Su Visión!"</text>
+    </node>
+
+    <node id="67">
+        <speaker> NARR. </speaker>
+        <text>  El clérigo ríe para luego toser con violencia.</text>
+    </node>
+
+    <node id="68">
+        <speaker> NARR. </speaker>
+        <text>  Tose como alguien que le queda poco tiempo.</text>
+        <options> 
+            <option nextNode="51"> 
+                <body>1. "Claro, por supuesto, déjame terminar anda."</body>
+            </option>
+            <option nextNode="300"> 
+                <body>2. [Observarle] ¿Qué le pasa, exactamente?</body>
+            </option>
+        </options>
+    </node>
+
+
+
+    <node id="300">
+        <speaker> NARR. </speaker>
+        <text> Una rápida evaluación mientras el hombre recupera el aliento te hace confirmar que padece alguna última fase de alguna enfermedad. Muy posiblemente contraida de alguna herida mal curada o mala alimentación. </text>
+    </node>
+    <node id="302">
+        <speaker> OKHALAM </speaker>
+        <text> "... Pronto todos morirán y me elevaré como Profeta de la Ahogada." </text>
+    </node>
+    <node id="303">
+        <speaker> OKHALAM </speaker>
+        <text> Sonríe y orienta su cabeza hacia ti. "A no ser que mi deidad ya tenga otros planes para mi." </text>
+        <options> 
+            <option nextNode="1000"> 
+                <body>1. "Basta ya." [Hundir su nuez]</body>
+            </option>
+            <option nextNode="51"> 
+                <body>2. "Y planes tiene, pero antes contéstame a unas preguntas."</body>
+            </option>
+        </options>
+    </node>
+
+    <node id="70">
+        <speaker> OKHALAM </speaker>
+        <text> "Algunos ya murieron antes de que yo me cayera. Otros cayeron conmigo. Y otros muy seguramente estarán muriendo mientras hablamos." </text>
+    </node>
+    <node id="71">
+        <speaker> OKHALAM </speaker>
+        <text> "He escuchado que aún en sueños, somos capaces de encontrar una verdadera muerte aquí." </text>
+    </node>
+    <node id="72">
+        <speaker> OKHALAM </speaker>
+        <text> "Y que vosotros sois también capaces, pero solo si nosotros estamos aquí." </text>
+    </node>
+    <node id="73">
+        <speaker> NARR. </speaker>
+        <text> Mientras él o alguno de sus sacos de carne deambule por aquí, podrías morir. </text>
+        <options> 
+            <option nextNode="1000"> 
+                <body>1. Mejor no correr el riesgo. [Acabar con él]. </body>
+            </option>
+            <option nextNode="1000"> 
+                <body>2. [Dejarle vivir] </body>
+            </option>
+        </options>
+    </node>
+
+    <node id="150">
+        <speaker> NARR. </speaker>
+        <text>  El clérigo se queda inmóvil durante diez segundos, sin conjurar palabra. </text>
+    </node>
+    <node id="151">
+        <speaker> OKHALAM </speaker>
+        <text>  "¿Cara-col..? ¿Qué tipo de bestia abisal es esa?" </text>
+        <options> 
+            <option nextNode="152"> 
+                <body>1. "Ninguna. Es un bicho. De tierra."</body>
+            </option>
+            <option nextNode="1000"> 
+                <body>2. Esto es un sin sentido. [Comprueba qué cráneo es más duro: El tuyo o el suyo.] </body>
+            </option>
+        </options>
+    </node>
+
+    <node id="152">
+        <speaker> NARR. </speaker>
+        <text> La confusión aumenta. </text>
+    </node>
+    <node id="153">
+        <speaker> OKHALAM </speaker>
+        <text> "No lo entiendo. ¿Tiene cara de col?" </text>
+        <options> 
+            <option nextNode="1000"> 
+                <body>1. "No." [Encharcar sus pulmones]</body>
+            </option>
+            <option nextNode="1000"> 
+                <body>2.  "No." [Hervir su sangre] </body>
+            </option>
+            <option nextNode="1000"> 
+                <body>3.  "No." [Licuar sus tripas] </body>
+            </option>
+            <option nextNode="154"> 
+                <body>4.  "No." </body>
+            </option>
+        </options>
+    </node>
+
+    <node id="154">
+        <speaker> OKHALAM </speaker>
+        <text> "Me temo que desconozco la existencia de esa criatura." </text>
+    </node>
+
+    <node id="155">
+        <speaker> OKHALAM </speaker>
+        <text> "...¿Pero acaso importa? Puedo *ver* que quieres algo de mi, criatura." </text>
+        <options> 
+            <option nextNode="1000"> 
+                <body>1. "No." [Hacer todo lo anterior]</body>
+            </option>
+            <option nextNode="51"> 
+                <body>2. "Está bien, contéstame a algunas cosas." </body>
+            </option>
+        </options>
+    </node>
+
+    <node id="200">
+        <speaker> NARR. </speaker>
+        <text>  El clérigo ríe para luego toser con violencia. </text>
+    </node>
+
+    <node id="201">
+        <speaker> NARR. </speaker>
+        <text>  Tose como alguien que le queda poco tiempo. </text>
+    </node>
+    <node id="202">
+        <speaker> OKHALAM </speaker>
+        <text>  "Puede que sí, criatura. Pero sé que me han acompañado en este abismo onírico." </text>
+    </node>
+    <node id="203">
+        <speaker> NARR. </speaker>
+        <text>  Vuelve a toser con violencia, pero parece que tiene intenciones de seguir hablando.</text>
+        <options> 
+            <option nextNode="204"> 
+                <body>1. "Te hayan acompañado o no, ahora mismo estás solo."</body>
+            </option>
+            <option nextNode="250"> 
+                <body>2. [Dejarle terminar] </body>
+            </option>
+            <option nextNode="300"> 
+                <body>3. [Observarle] ¿Qué le pasa exactamente? </body>
+            </option>
+        </options>
+    </node>
+
+    <node id="205">
+        <speaker> NARR. </speaker>
+        <text>  El hombre asiente mientras se limpia la boca con su propia manga.  </text>
+    </node>
+    <node id="206">
+        <speaker> OKHALAM </speaker>
+        <text>  "Que estén ahora o no aquí no importa. Estoy preparado para mi ascensión." </text>
+    </node>
+    <node id="207">
+        <speaker> OKHALAM </speaker>
+        <text>  "... Pronto todos morirán y me elevaré como Profeta de la Ahogada." </text>
+    </node>
+    <node id="208">
+        <speaker> OKHALAM </speaker>
+        <text>  Sonríe y orienta su cabeza hacia ti. "A no ser que mi deidad ya tenga otros planes para mi." </text>
+        <options> 
+            <option nextNode="1000"> 
+                <body>1. "Basta ya." [Hundir su nuez]</body>
+            </option>
+            <option nextNode="51"> 
+                <body>2. "Y planes tiene, pero antes contéstame a unas preguntas."</body>
+            </option>
+        </options>
+    </node>
+
+    <node id="250">
+        <speaker> NARR. </speaker>
+        <text>  El hombre se limpia la boca con su propia manga.  </text>
+    </node>
+    <node id="251">
+        <speaker> OKHALAM </speaker>
+        <text>  "Que estén ahora o no aquí no importa. Estoy preparado para mi ascensión." </text>
+    </node>
+    <node id="252">
+        <speaker> OKHALAM </speaker>
+        <text>  "... Pronto todos morirán y me elevaré como Profeta de la Ahogada." </text>
+    </node>
+    <node id="253">
+        <speaker> OKHALAM </speaker>
+        <text>  Sonríe y orienta su cabeza hacia ti. "A no ser que mi deidad ya tenga otros planes para mi." </text>
+        <options> 
+            <option nextNode="1000"> 
+                <body>1. "Basta ya." [Hundir su nuez]</body>
+            </option>
+            <option nextNode="51"> 
+                <body>2. "Y planes tiene, pero antes contéstame a unas preguntas."</body>
+            </option>
+        </options>
+    </node>
+
+    <node id="1000">
+        <events>
+            <event> FUNDIDO_NEGRO </event>
+            <event> SONIDO_HUESO_ROTO </event>
+        </events>
+        <speaker> NARR. </speaker>
+        <text>  Resultó ser el tuyo. Por mucho.  </text>
+    </node>
+    <node id="1001">
+        <speaker> NARR. </speaker>
+        <text>  Resultó ser el tuyo. Por mucho.  </text>
+        <final> 1 </final>
+    </node>
+
+
+</root>
